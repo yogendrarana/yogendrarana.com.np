@@ -12,16 +12,13 @@ interface AccordionProps {
 }
 
 const Accordion: React.FC<AccordionProps> = ({ question, answer, activeAccordion, i }) => {
-    // const [isOpen, setIsOpen] = useState(activeAccordion === i);
 
     return (
         <div
-            // onClick={() => setIsOpen(!isOpen)}
             className="flex flex-col cursor-pointer"
         >
-            {/* question */}
             <div className="group flex justify-between items-center">
-                <p className="group-hover:underline">{question}</p>
+                <p className="font-medium group-hover:underline">{question}</p>
 
                 <button
                     className="

@@ -1,6 +1,5 @@
 "use client";
 
-import TechStack from "./tech-stack";
 import { MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { MY_DATA } from "@/data/my-data";
@@ -29,8 +28,6 @@ export default function Hero() {
                         </motion.span>
                     ))}
                 </div>
-
-                <TechStack />
             </div>
         </div>
     );

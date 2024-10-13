@@ -5,13 +5,11 @@ import EmailButton from "@/components/email-button";
 import AnimatedLink from "@/components/animated-link";
 
 const Contact = () => {
-
     return (
         <div className="py-6 sm:py-10 md:py-20 rounded-lg flex flex-col gap-8">
-            {/* heading */}
-            <div className="border-b border-gray-300">
+            <div className="border-b">
                 <div className="font-bold uppercase">
-                    <p className="text-[30px]">Contact Me!</p>
+                    <p className="text-2xl">Contact Me!</p>
                 </div>
             </div>
 
@@ -24,24 +22,19 @@ const Contact = () => {
                 <div className="space-y-2">
                     <p>Find me on:</p>
                     <div className="font-bold flex flex-col md:flex-row gap-2 md:gap-10 flex-wrap">
-                        {
-                            MY_DATA.contact.social.map((social, index) => {
-                                return (
-                                    <div key={index} className="flex gap-2 items-center">
-                                        <i className={social.logo.src} />
-                                        <AnimatedLink
-                                            label={social.name}
-                                            url={social.url}
-                                        />
-                                    </div>
-                                )
-                            })
-                        }
+                        {MY_DATA.contact.social.map((social, index) => {
+                            return (
+                                <div key={index} className="flex gap-2 items-center">
+                                    <i className={social.logo.src} />
+                                    <AnimatedLink label={social.name} url={social.url} />
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Contact;
