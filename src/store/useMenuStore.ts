@@ -1,33 +1,29 @@
-import { create } from 'zustand';
+import { create } from "zustand";
 
 // state
 type MenuState = {
-    isMenuOpen: boolean
-}
+    isMenuOpen: boolean;
+};
 
 // actions
 type MenuAction = {
-    toggleMenu: () => void
-    setIsMenuOpen: (value: boolean) => void
-}
-
+    toggleMenu: () => void;
+    setIsMenuOpen: (value: boolean) => void;
+};
 
 // initial state
 const initialState: MenuState = {
     isMenuOpen: false
-}
+};
 
-// use 
-export const useMenuStore = create<MenuState & MenuAction>()(
-    (set) => ({
+// use
+export const useMenuStore = create<MenuState & MenuAction>()((set) => ({
+    // initial state
+    ...initialState,
 
-        // initial state
-        ...initialState,
+    // actions
+    toggleMenu: () => set((state) => ({ isMenuOpen: !state.isMenuOpen })),
 
-        // actions
-        toggleMenu: () => set(state => ({ isMenuOpen: !state.isMenuOpen })),
-
-        // set state
-        setIsMenuOpen: (value: boolean) => set({ isMenuOpen: value })
-    })
-)
+    // set state
+    setIsMenuOpen: (value: boolean) => set({ isMenuOpen: value })
+}));

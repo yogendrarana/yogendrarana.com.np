@@ -1,6 +1,6 @@
-import React from 'react'
-import { MY_DATA } from '@/data/my-data'
-import { ArrowRight } from 'lucide-react'
+import React from "react";
+import { MY_DATA } from "@/data/my-data";
+import { ArrowRight } from "lucide-react";
 
 const Experience = () => {
     return (
@@ -12,9 +12,7 @@ const Experience = () => {
             <ol className="relative space-y-6 border-neutral-300 dark:border-neutral-800">
                 {MY_DATA.experience.map((exp, index) => (
                     <li key={index}>
-                        <time
-                            className="mb-2 font-mono text-xs font-normal leading-none text-neutral-600 dark:text-neutral-400"
-                        >
+                        <time className="mb-2 font-mono text-xs font-normal leading-none text-neutral-600 dark:text-neutral-400">
                             {exp.start} - {exp.end}
                         </time>
                         <div className="mt-2 flex flex-col space-y-0.5">
@@ -42,7 +40,7 @@ const Experience = () => {
                 ))}
             </ol>
         </section>
-    )
-}
+    );
+};
 
-export default Experience
+export default Experience;

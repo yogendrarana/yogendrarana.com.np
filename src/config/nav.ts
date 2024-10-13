@@ -13,7 +13,7 @@ export const nav_menu = {
         },
         {
             label: "Resume",
-            href: MY_DATA.cvUrl,
-        },
-    ],
-}
+            href: MY_DATA.cvUrl
+        }
+    ]
+};

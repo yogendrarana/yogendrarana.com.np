@@ -5,4 +5,4 @@ export type TProject = {
     image: any;
     liveLink: string;
     githubLink?: string;
-}
+};

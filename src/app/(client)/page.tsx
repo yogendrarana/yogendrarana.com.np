@@ -1,21 +1,20 @@
-import { cn } from "@/lib/utils";
+import Hero from "./_components/hero";
+import { Shell } from "@/components/shell";
 import Projects from "./_components/projects";
+import Navbar from "@/components/site-header";
 import About from "@/app/(client)/_components/about";
-import Banner from "@/app/(client)/_components/banner";
 import Contact from "@/app/(client)/_components/contact";
 
 const HomePage = () => {
-  return (
-    <div className={cn(
-      "flex flex-col gap-4",
-      "px-[20px] sm:px-[30px] md:px-[100px] lg:px-[150px] xl:px-[300px]"
-    )}>
-      <Banner />
-      <About />
-      <Projects />
-      <Contact />
-    </div>
-  )
-}
+    return (
+        <Shell>
+            <Navbar />
+            <Hero />
+            <About />
+            <Projects />
+            <Contact />
+        </Shell>
+    );
+};
 
 export default HomePage;

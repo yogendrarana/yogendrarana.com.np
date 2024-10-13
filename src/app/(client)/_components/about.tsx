@@ -5,9 +5,9 @@ import { useState } from "react";
 
 // data
 import { MY_DATA } from "@/data/my-data";
+import Accordion from "@/components/accordion";
 
 // components
-import Accordion from "@/components/util/accordion";
 
 const About = () => {
     const [activeAccordion, setActiveAccordion] = useState<number>(0);
@@ -29,28 +29,27 @@ const About = () => {
 
                 {/* faq */}
                 <div className="flex flex-col gap-4">
-                    <h1 className="pb-2 text-xl font-bold border-b border-gray-300">More About Me!</h1>
+                    <h1 className="pb-2 text-xl font-bold border-b border-gray-300">
+                        More About Me!
+                    </h1>
                     <div className="flex flex-col gap-4">
-                        {
-                            MY_DATA.faq.map((faq, index) => {
-                                return (
-                                    <div key={index} onClick={() => setActiveAccordion(index)}>
-                                        <Accordion
-                                            question={faq.question}
-                                            answer={faq.answer}
-                                            activeAccordion={activeAccordion}
-                                            i={index}
-                                        />
-                                    </div>
-                                )
-                            })
-                        }
+                        {MY_DATA.faq.map((faq, index) => {
+                            return (
+                                <div key={index} onClick={() => setActiveAccordion(index)}>
+                                    <Accordion
+                                        question={faq.question}
+                                        answer={faq.answer}
+                                        activeAccordion={activeAccordion}
+                                        i={index}
+                                    />
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </div>
         </div>
-
-    )
-}
+    );
+};
 
 export default About;

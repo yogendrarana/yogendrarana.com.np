@@ -1,8 +1,8 @@
 import { MY_DATA } from "@/data/my-data";
 
 // import components
-import EmailButton from "@/components/util/email-button";
-import AnimatedLink from "@/components/util/animated-link";
+import EmailButton from "@/components/email-button";
+import AnimatedLink from "@/components/animated-link";
 
 const Contact = () => {
 
