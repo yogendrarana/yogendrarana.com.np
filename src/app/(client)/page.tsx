@@ -1,9 +1,9 @@
-import Hero from "./_components/hero";
+import Hero from "@/components/layout/hero";
 import { Shell } from "@/components/shell";
-import Projects from "./_components/projects";
 import Navbar from "@/components/site-header";
-import About from "@/app/(client)/_components/about";
-import Contact from "@/app/(client)/_components/contact";
+import About from "@/components/layout/about";
+import Contact from "@/components/layout/contact";
+import Projects from "@/components/layout/projects";
 
 const HomePage = () => {
     return (

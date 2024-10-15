@@ -1,17 +1,12 @@
 "use client";
 
 import React from "react";
-import { useState } from "react";
-
-// data
 import { MY_DATA } from "@/data/my-data";
-import Accordion from "@/components/accordion";
+import { AccordionContent, AccordionItem, AccordionTrigger, Accordion } from "../ui/accordion";
 
 // components
 
 const About = () => {
-    const [activeAccordion, setActiveAccordion] = useState<number>(0);
-
     return (
         <div className="p-2 border rounded-lg bg-white shadow-sm flex flex-col justify-center overflow-hidden">
             <div className="p-6 sm:p-10 md:p-20 bg-gray-100 rounded-lg flex flex-col gap-8">
@@ -27,20 +22,18 @@ const About = () => {
                 </div>
 
                 {/* faq */}
-                <div className="flex flex-col gap-4">
+                <Accordion defaultValue={MY_DATA.faq[0].question} type="single" collapsible className="w-full">
                     {MY_DATA.faq.map((faq, index) => {
                         return (
-                            <div key={index} onClick={() => setActiveAccordion(index)}>
-                                <Accordion
-                                    question={faq.question}
-                                    answer={faq.answer}
-                                    activeAccordion={activeAccordion}
-                                    i={index}
-                                />
-                            </div>
+                            <AccordionItem key={index} value={faq.question} className="border-none">
+                                <AccordionTrigger className="py-3">{faq.question}</AccordionTrigger>
+                                <AccordionContent className="text-gray-500">
+                                    {faq.answer}
+                                </AccordionContent>
+                            </AccordionItem>
                         );
                     })}
-                </div>
+                </Accordion>
             </div>
         </div>
     );
