@@ -1,8 +1,8 @@
-import { MY_DATA } from "@/data/my-data";
+"use client";
 
-// import components
 import Magnetic from "./magnetic";
-import { ExternalLink } from "./external-link";
+import { MY_DATA } from "@/data/my-data";
+import AnimatedLink from "./animated-link";
 
 const Socials = () => {
     const socials = MY_DATA.contact.social;
@@ -12,9 +12,14 @@ const Socials = () => {
             {socials.map((option, index) => (
                 <Magnetic key={index}>
                     <div className="group">
-                        <ExternalLink animate href={option.url} className="grid place-items-center">
-                            <i className={`${option.logo.src}`}> </i>
-                        </ExternalLink>
+                        <AnimatedLink
+                            isExternal
+                            animate
+                            href={option.url}
+                            className="grid place-items-center"
+                        >
+                            <option.logo className="h-4 w-4" />
+                        </AnimatedLink>
                     </div>
                 </Magnetic>
             ))}

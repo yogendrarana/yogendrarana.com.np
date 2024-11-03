@@ -1,18 +1,13 @@
-import { MY_DATA } from "@/data/my-data";
+import React from "react";
 
-// import components
+import { MY_DATA } from "@/data/my-data";
 import EmailButton from "@/components/email-button";
+import SectionContainer from "../section-container";
 import AnimatedLink from "@/components/animated-link";
 
 const Contact = () => {
     return (
-        <div className="py-6 sm:py-10 md:py-20 rounded-lg flex flex-col gap-8">
-            <div className="border-b">
-                <div className="font-bold uppercase">
-                    <p className="text-2xl">Contact Me!</p>
-                </div>
-            </div>
-
+        <SectionContainer title="Contact Me!">
             <div className="flex flex-col md:flex-row gap-8 justify-between">
                 <div className="space-y-2">
                     <p>Email Me:</p>
@@ -25,15 +20,17 @@ const Contact = () => {
                         {MY_DATA.contact.social.map((social, index) => {
                             return (
                                 <div key={index} className="flex gap-2 items-center">
-                                    <i className={social.logo.src} />
-                                    <AnimatedLink label={social.name} url={social.url} />
+                                    <social.logo className="h-4 w-4" />
+                                    <AnimatedLink href={social.url} isExternal>
+                                        {social.name}
+                                    </AnimatedLink>
                                 </div>
                             );
                         })}
                     </div>
                 </div>
             </div>
-        </div>
+        </SectionContainer>
     );
 };
 

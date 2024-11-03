@@ -9,7 +9,7 @@ interface Props {
     animate?: boolean;
 }
 
-const ExternalLink = (props: Props) => {
+export default function ExternalLink(props: Props) {
     return (
         <Link
             href={props.href}
@@ -34,6 +34,4 @@ const ExternalLink = (props: Props) => {
             {props.children}
         </Link>
     );
-};
-
-export { ExternalLink };
+}

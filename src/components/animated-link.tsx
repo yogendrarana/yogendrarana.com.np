@@ -1,27 +1,38 @@
-import React from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import type { ReactNode } from "react";
 
-// interface
-interface ILink {
-    label: string;
-    url: string;
+interface Props {
+    href: string;
+    children: ReactNode;
+    isExternal?: boolean;
     className?: string;
+    animate?: boolean;
 }
 
-const AnimatedLink = ({ label, url, className }: ILink) => {
+export default function ExternalLink(props: Props) {
     return (
         <Link
-            href={url}
-            target="_blank"
+            href={props.href}
+            rel="noreferrer"
+            target={props.isExternal ? "_blank" : "_self"}
             className={cn(
-                "font-boldinline-block relative before:content-[''] before:py-1 before:absolute before:bottom-[-0.25rem] before:left-0 before:w-0 before:hover:w-full before:border-b-2 before:border-black before:transition-all before:ease-in-out before:duration-500 ",
-                className
+                props.className,
+                props.animate &&
+                    `
+                    relative
+                    cursor-pointer 
+                    hover:font-bold
+                    
+                    before:content-['']
+                    before:h-[0.5rem] before:w-[0.5rem]
+                    before:bg-black before:rounded-full
+                    before:absolute before:bottom-[-1rem] before:left-1/2 before:-translate-x-1/2
+                    before:scale-0 group-hover:before:scale-100
+                    before:transition-all before:ease before:duration-300`
             )}
         >
-            {label}
+            {props.children}
         </Link>
     );
-};
-
-export default AnimatedLink;
+}

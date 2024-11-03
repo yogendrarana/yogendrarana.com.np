@@ -1,14 +1,14 @@
-import Hero from "@/components/layout/hero";
+import Hero from "@/components/landing/hero";
 import { Shell } from "@/components/shell";
-import Navbar from "@/components/site-header";
-import About from "@/components/layout/about";
-import Contact from "@/components/layout/contact";
-import Projects from "@/components/layout/projects";
+import SiteHeader from "@/components/site-header";
+import About from "@/components/landing/about";
+import Contact from "@/components/landing/contact";
+import Projects from "@/components/landing/projects";
 
 const HomePage = () => {
     return (
         <Shell>
-            <Navbar />
+            <SiteHeader />
             <Hero />
             <About />
             <Projects />

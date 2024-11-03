@@ -1,4 +1,5 @@
 import { ArtsyLogo, SwiftLogo, LightBulb } from "@/assets";
+import { Icons } from "@/components/icons";
 
 export const MY_DATA = {
     name: "Yogendra Rana",
@@ -6,7 +7,7 @@ export const MY_DATA = {
     location: "Pokhara, Nepal",
     locationLink: "https://www.google.com/maps/place/pokhara",
     about: "Full Stack Developer",
-    generalSummary: "Web developer from Nepal",
+    shortSummary: "Web developer from Nepal",
     professionalSummary:
         "I am a full stack web developer from Pokhara, Nepal with +2 years experience in JavaScript/TS and its frameworks like React, Next, Node, Express, and Nest. Also familiar with Go and its backend framework, Gin.",
     avatarUrl: " https://github.com/yogendrarana.png",
@@ -19,17 +20,17 @@ export const MY_DATA = {
             {
                 name: "GitHub",
                 url: "https://github.com/yogendrarana",
-                logo: { type: "img", src: "fa-brands fa-github" }
+                logo: Icons.github
             },
             {
                 name: "LinkedIn",
                 url: "https://www.linkedin.com/in/yogendra-rana/",
-                logo: { type: "icon", src: "fa-brands fa-linkedin-in" }
+                logo: Icons.linkedin
             },
             {
                 name: "Twitter",
                 url: "https://twitter.com/yoogendra_rana",
-                logo: { type: "icon", src: "fa-brands fa-twitter" }
+                logo: Icons.twitter
             }
         ]
     },

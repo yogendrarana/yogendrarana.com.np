@@ -1,6 +1,6 @@
 import React from 'react'
 
-const BackgroundProvider = ({ children }: { children: React.ReactNode }) => {
+const BackgroundGridProvider = ({ children }: { children: React.ReactNode }) => {
     return (
         <div
             className="absolute h-[100vh] w-full inset-0 -z-100
@@ -15,4 +15,4 @@ const BackgroundProvider = ({ children }: { children: React.ReactNode }) => {
     )
 }
 
-export default BackgroundProvider;
+export default BackgroundGridProvider;

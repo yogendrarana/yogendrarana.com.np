@@ -3,7 +3,6 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/react";
-import BackgroundProvider from "@/components/provider/background-provider";
 
 export const metadata: Metadata = {
     title: "Yogendra Rana",
@@ -44,7 +43,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                     "selection:bg-neutral-200 dark:selection:bg-neutral-700"
                 )}
             >
-                <BackgroundProvider>{children}</BackgroundProvider>
+                <main>{children}</main>
             </body>
             <Analytics />
         </html>

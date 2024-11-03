@@ -9,11 +9,13 @@ export const nav_menu = {
     mainMenu: [
         {
             label: "Blog",
-            href: "/blog"
+            href: "/blog",
+            isExternal: false
         },
         {
             label: "Resume",
-            href: MY_DATA.cvUrl
+            href: MY_DATA.cvUrl,
+            isExternal: true
         }
     ]
 };

@@ -4,8 +4,6 @@ import React from "react";
 import { MY_DATA } from "@/data/my-data";
 import { AccordionContent, AccordionItem, AccordionTrigger, Accordion } from "../ui/accordion";
 
-// components
-
 const About = () => {
     return (
         <div className="p-2 border rounded-lg bg-white shadow-sm flex flex-col justify-center overflow-hidden">
