@@ -67,6 +67,7 @@ export default function MobileNav() {
                                 <motion.div key={item.label} variants={itemVariants}>
                                     <Link
                                         href={item.href}
+                                        download={item.download}
                                         target={item.isExternal ? "_blank" : "_self"}
                                         className="text-4xl font-bold mb-6 hover:text-primary transition-colors"
                                         onClick={toggleMenu}
