@@ -1,26 +1,30 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
+import { ArrowDown } from "lucide-react";
 
 interface Props {
     href: string;
     children: ReactNode;
+    download?: boolean;
     isExternal?: boolean;
     className?: string;
     animate?: boolean;
 }
 
-export default function ExternalLink(props: Props) {
+export default function AnimatedLink(props: Props) {
     return (
         <Link
             href={props.href}
             rel="noreferrer"
-            target={props.isExternal ? "_blank" : "_self"}
+            download={props.download}
+            target={props.isExternal || props.download ? "_blank" : "_self"}
             className={cn(
                 props.className,
                 props.animate &&
                     `
                     relative
+                    flex items-center gap-2
                     cursor-pointer 
                     hover:font-bold
                     
@@ -33,6 +37,7 @@ export default function ExternalLink(props: Props) {
             )}
         >
             {props.children}
+            {props.download && <ArrowDown size={16} />}
         </Link>
     );
 }

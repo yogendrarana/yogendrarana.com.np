@@ -1,9 +1,9 @@
 // components
-import { nav_menu } from "@/config/nav";
 import Logo from "./logo";
 import Socials from "./socials";
 import Magnetic from "./magnetic";
 import MobileNav from "./mobile-nav";
+import { nav_menu } from "@/config/nav";
 import AnimatedLink from "./animated-link";
 
 const SiteHeader = () => {
@@ -15,11 +15,11 @@ const SiteHeader = () => {
 
             <div className="hidden md:flex items-center">
                 <div className="flex items-center">
-                    <div className="flex gap-6 items-center">
+                    <div className="flex gap-8 items-center">
                         {mainMenu.map((nav, index) => (
                             <Magnetic key={index}>
                                 <div className="group">
-                                    <AnimatedLink animate href={nav.href}>
+                                    <AnimatedLink animate download={nav.download} href={nav.href}>
                                         {nav.label}
                                     </AnimatedLink>
                                 </div>

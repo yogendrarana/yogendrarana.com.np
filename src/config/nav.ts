@@ -10,12 +10,15 @@ export const nav_menu = {
         {
             label: "Blog",
             href: "/blog",
+            download: false,
             isExternal: false
         },
         {
             label: "Resume",
-            href: MY_DATA.cvUrl,
+            href: "./cv.pdf",
+            download: true,
             isExternal: true
         }
     ]
 };
+
