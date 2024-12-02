@@ -2,8 +2,8 @@ import Hero from "@/components/landing/hero";
 import { Shell } from "@/components/shell";
 import SiteHeader from "@/components/site-header";
 import About from "@/components/landing/about";
-import Contact from "@/components/landing/contact";
 import Projects from "@/components/landing/projects";
+import Footer from "@/components/landing/footer";
 
 const HomePage = () => {
     return (
@@ -12,7 +12,7 @@ const HomePage = () => {
             <Hero />
             <About />
             <Projects />
-            <Contact />
+            <Footer />
         </Shell>
     );
 };

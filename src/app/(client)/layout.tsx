@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
@@ -9,38 +9,20 @@ export const metadata: Metadata = {
     description: "Portfolio website of Yogendra Rana"
 };
 
-const interVariable = localFont({
-    variable: "--font-sans",
-    src: "../../assets/fonts/InterVariable.woff2",
-    weight: "100 900",
-    display: "swap",
-    preload: true
-});
-
-const geistMonoVariable = localFont({
-    variable: "--font-geist-mono",
-    src: "../../assets/fonts/GeistMonoVF.woff2",
-    weight: "100 900",
-    display: "swap",
-    preload: true
-});
+// font
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang="en">
             <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <link rel="icon" type="image/svg+xml" href="./smiley.png" />
-                <link
-                    rel="stylesheet"
-                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-                />
+                <link rel="icon" type="image/svg+xml" href="smiley.png" />
             </head>
             <body
                 className={cn(
-                    `font-sans ${interVariable.variable} ${geistMonoVariable.variable} antialiased`,
-                    "bg-white dark:bg-neutral-900",
-                    "selection:bg-neutral-200 dark:selection:bg-neutral-700"
+                    "w-full flex flex-col justify-center overflow-x-hidden scroll-smooth",
+                    inter.className
                 )}
             >
                 <main>{children}</main>

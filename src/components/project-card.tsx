@@ -4,6 +4,7 @@ import Image from "next/image";
 import { TProject } from "@/types";
 import { Badge } from "./ui/badge";
 import { ArrowRight } from "lucide-react";
+import { Icons } from "./icons";
 
 interface ProjectCardProps {
     project: TProject;
@@ -44,7 +45,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                         href={project.githubLink || "/"}
                         className="text-gray-700 hover:text-black"
                     >
-                        <i className="fa-brands fa-github text-xl"></i>
+                        {<Icons.github className="h-5 w-5" />}
                     </Link>
                 </div>
                 <p className="truncate text-sm dark:text-neutral-400">{project.description}</p>
