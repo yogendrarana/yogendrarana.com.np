@@ -6,11 +6,28 @@ import { X, Menu } from "lucide-react";
 import { nav_menu } from "@/config/nav";
 import { motion, AnimatePresence } from "framer-motion";
 import { MY_DATA } from "@/data/my-data";
+import { Icons } from "./icons";
 
 export default function MobileNav() {
     const mainMenu = nav_menu.mainMenu;
-    const socials = MY_DATA.contact.social;
     const [isOpen, setIsOpen] = useState(false);
+    const socials = [
+        {
+            name: "GitHub",
+            url: MY_DATA.contact.github,
+            logo: Icons.github
+        },
+        {
+            name: "LinkedIn",
+            url: MY_DATA.contact.linkedin,
+            logo: Icons.linkedin
+        },
+        {
+            name: "Twitter",
+            url: MY_DATA.contact.twitter,
+            logo: Icons.twitter
+        }
+    ];
 
     const toggleMenu = () => setIsOpen(!isOpen);
 
