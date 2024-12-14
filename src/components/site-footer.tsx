@@ -5,7 +5,7 @@ import Magnetic from "./magnetic";
 import AnimatedLink from "./animated-link";
 import { Icons } from "./icons";
 
-const data = ["Get in touch *", "Get in touch *", "Get in touch *"];
+const data = ["Get in touch *", "Get in touch *", "Get in touch *", "Get in touch *"];
 
 export default function SiteFooter() {
     const socials = [
@@ -30,7 +30,7 @@ export default function SiteFooter() {
             <Marquee duration={20} repeat={2} direction="left" className="w-full font-light mb-16">
                 {data.map((item, index) => (
                     <div key={index} className="flex flex-col items-center">
-                        <span className="text-4xl">{item}</span>
+                        <span className="text-3xl">{item}</span>
                     </div>
                 ))}
             </Marquee>
@@ -55,12 +55,11 @@ export default function SiteFooter() {
                     ))}
                 </div>
 
-                {/* CTA Button */}
                 <Link
                     href="#"
                     className="group relative inline-flex items-center gap-2 rounded-full border border-black px-6 py-3 text-black transition-colors hover:bg-black hover:text-white"
                 >
-                    Let&apos;s talk
+                    Happy Coding!
                     <span className="size-6 rounded-full bg-black group-hover:bg-white transition-colors" />
                 </Link>
             </div>
