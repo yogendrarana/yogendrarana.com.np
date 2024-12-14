@@ -23,7 +23,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                                 className="h-8 w-8 rounded-md border p-1"
                             />
                         ) : (
-                            <div className="h-8 w-8 bg-neutral-200 rounded-md"></div>
+                            <div className="h-6 w-6 border rounded-md"></div>
                         )}
                         <Link
                             href={project.liveLink}
@@ -33,7 +33,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                         >
                             <span>{project.title}</span>
                             <ArrowRight
-                                size={13}
+                                size={16}
                                 strokeWidth={2}
                                 className="opacity-50 group-hover:opacity-100 group-hover:translate-x-[2px] -rotate-45 duration-200"
                             />

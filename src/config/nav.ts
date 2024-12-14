@@ -13,12 +13,12 @@ export const nav_menu = {
             download: false,
             isExternal: false
         },
-        {
-            label: "Resume",
-            href: "./cv.pdf",
-            download: true,
-            isExternal: true
-        }
+        // {
+        //     label: "Resume",
+        //     href: "./cv.pdf",
+        //     download: true,
+        //     isExternal: true
+        // }
     ]
 };
 

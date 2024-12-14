@@ -3,9 +3,26 @@
 import Magnetic from "./magnetic";
 import { MY_DATA } from "@/data/my-data";
 import AnimatedLink from "./animated-link";
+import { Icons } from "./icons";
 
 const Socials = () => {
-    const socials = MY_DATA.contact.social;
+    const socials = [
+        {
+            name: "GitHub",
+            url: MY_DATA.contact.github,
+            logo: Icons.github
+        },
+        {
+            name: "LinkedIn",
+            url: MY_DATA.contact.linkedin,
+            logo: Icons.linkedin
+        },
+        {
+            name: "Twitter",
+            url: MY_DATA.contact.twitter,
+            logo: Icons.twitter
+        }
+    ];
 
     return (
         <div className="flex justify-center items-center gap-6">

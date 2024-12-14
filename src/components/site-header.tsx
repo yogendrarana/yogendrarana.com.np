@@ -28,7 +28,7 @@ const SiteHeader = () => {
                     </div>
                 </div>
 
-                <div className="mr-[2rem] flex">
+                <div className="flex">
                     <div className="mx-8 text-gray-200">|</div>
                     <Socials />
                 </div>

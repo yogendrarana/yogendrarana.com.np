@@ -1,5 +1,4 @@
 import { ArtsyLogo, SwiftLogo, LightBulb } from "@/assets";
-import { Icons } from "@/components/icons";
 
 export const MY_DATA = {
     name: "Yogendra Rana",
@@ -15,24 +14,9 @@ export const MY_DATA = {
     cvUrl: "https://cv.yogendrarana.com.np",
     contact: {
         emails: ["yogendrarana4321@gmail.com", "yogendrarana.mail@gmail.com"],
-        tel: "+977 9825159891",
-        social: [
-            {
-                name: "GitHub",
-                url: "https://github.com/yogendrarana",
-                logo: Icons.github
-            },
-            {
-                name: "LinkedIn",
-                url: "https://www.linkedin.com/in/yogendra-rana/",
-                logo: Icons.linkedin
-            },
-            {
-                name: "Twitter",
-                url: "https://twitter.com/yoogendra_rana",
-                logo: Icons.twitter
-            }
-        ]
+        github: "https://github.com/yogendrarana",
+        linkedin: "https://www.linkedin.com/in/yogendra-rana/",
+        twitter: "https://twitter.com/yoogendra_rana",
     },
     education: [
         {
@@ -46,30 +30,6 @@ export const MY_DATA = {
             degree: "10+2 Science",
             start: "2018",
             end: "2016"
-        }
-    ],
-    experience: [
-        {
-            company: "Rangin Technology",
-            link: "https://www.rangin.com.np/",
-            badges: ["Hybrid"],
-            role: "Full Stack Developer",
-            logo: "",
-            start: "May, 2022",
-            end: "present",
-            description:
-                "Worked as a fullstack developer to create user interfaces in React.js and Next.js and REST APIs in Node.js, Express.js, and Next.js. Technologies: JavaScript, TypeScript, React, Next.js, Node.js, Express.js, Nest.js, MongoDB, PostgreSQL, Docker, and Nginx."
-        },
-        {
-            company: "Nipuna Prabidhik Sewa",
-            link: "https://www.nipunasewa.com/",
-            badges: ["On Site"],
-            role: "React JS Developer",
-            logo: "",
-            start: "Jan, 2023",
-            end: "July, 2023",
-            description:
-                "As a frontend developer, I built an admin panel for emart using React.js, Tailwind CSS, and Firebase. Technologies: React.js, Tailwind CSS, Firebase"
         }
     ],
     skills: [
@@ -92,6 +52,15 @@ export const MY_DATA = {
         "Ubuntu"
     ],
     projects: [
+        {
+            title: "Craft UI",
+            techStack: ["Next.js", "Tailwind CSS"],
+            description:
+                "A collection of beautiful, interactive UI components built with React.js, Tailwind CSS, and Framer Motion.",
+            image: LightBulb,
+            liveLink: "https://craft-dot-ui.vercel.app/",
+            githubLink: "https://github.com/yogendrarana/craftui"
+        },
         {
             title: "Feedmo",
             techStack: ["Next.js", "radix UI", "Shad CN", "Auth.js", "MongoDB", "Resend", "Stripe"],

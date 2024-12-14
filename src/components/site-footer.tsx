@@ -1,12 +1,30 @@
 import Link from "next/link";
-import Marquee from "../marquee";
+import Marquee from "./marquee";
 import { MY_DATA } from "@/data/my-data";
-import Magnetic from "../magnetic";
-import AnimatedLink from "../animated-link";
+import Magnetic from "./magnetic";
+import AnimatedLink from "./animated-link";
+import { Icons } from "./icons";
 
 const data = ["Get in touch *", "Get in touch *", "Get in touch *"];
 
-export default function Footer() {
+export default function SiteFooter() {
+    const socials = [
+        {
+            name: "GitHub",
+            url: MY_DATA.contact.github,
+            logo: Icons.github
+        },
+        {
+            name: "LinkedIn",
+            url: MY_DATA.contact.linkedin,
+            logo: Icons.linkedin
+        },
+        {
+            name: "Twitter",
+            url: MY_DATA.contact.twitter,
+            logo: Icons.twitter
+        }
+    ];
     return (
         <footer className=" p-12 relative border rounded-xl overflow-hidden">
             <Marquee duration={20} repeat={2} direction="left" className="w-full font-light mb-16">
@@ -21,7 +39,7 @@ export default function Footer() {
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
                 {/* Social links */}
                 <div className="flex gap-8">
-                    {MY_DATA.contact.social.map((option, index) => (
+                    {socials.map((option, index) => (
                         <Magnetic key={index}>
                             <div className="group">
                                 <AnimatedLink
