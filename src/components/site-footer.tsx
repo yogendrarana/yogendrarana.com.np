@@ -30,7 +30,7 @@ export default function SiteFooter() {
             <Marquee duration={20} repeat={2} direction="left" className="w-full font-light mb-16">
                 {data.map((item, index) => (
                     <div key={index} className="flex flex-col items-center">
-                        <span className="text-3xl">{item}</span>
+                        <span className="text-3xl text-gray-600">{item}</span>
                     </div>
                 ))}
             </Marquee>
