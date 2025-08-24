@@ -1,3 +1,9 @@
+import Bluesky from "@/components/icon/bluesky";
+import GitHub from "@/components/icon/github";
+import LinkedIn from "@/components/icon/linkedin";
+import Peerlist from "@/components/icon/peerlist";
+import X from "@/components/icon/x";
+
 export const MY_DATA = {
     name: "Yogendra Rana",
     initials: "YR",
@@ -10,10 +16,31 @@ export const MY_DATA = {
         emails: ["yogendrarana4321@gmail.com", "yogendrarana.mail@gmail.com"]
     },
     socials: {
-        github: "https://github.com/yogendrarana",
-        linkedin: "https://www.linkedin.com/in/yogendra-rana/",
-        x: "https://x.com/yooogendra_rana",
-        bluesky: "https://bsky.app/profile/yogendrarana.bsky.social"
+        github: {
+            name: "GitHub",
+            link: "https://github.com/yogendrarana",
+            component: GitHub
+        },
+        linkedin: {
+            name: "LinkedIn",
+            link: "https://www.linkedin.com/in/yogendra-rana",
+            component: LinkedIn
+        },
+        x: {
+            name: "Twitter",
+            link: "https://x.com/yooogendra_rana",
+            component: X
+        },
+        bluesky: {
+            name: "Bluesky",
+            link: "https://bsky.app/profile/yogendrarana.bsky.social",
+            component: Bluesky
+        },
+        peerlist: {
+            name: "Peerlist",
+            link: "https://peerlist.io/yogendrarana",
+            component: Peerlist
+        }
     },
     skills: [
         "JavaScript",

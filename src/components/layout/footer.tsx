@@ -28,11 +28,15 @@ export default function Footer() {
 
                     <p className="text-muted-foreground text-sm text-center">
                         Built by{" "}
-                        <Link href={MY_DATA.socials.x} target="__blank" className="underline">
+                        <Link href={MY_DATA.socials.x.link} target="__blank" className="underline">
                             yogendra rana
                         </Link>
                         . The source code is available on{" "}
-                        <Link href="https://github.com/yogendrarana/yogendrarana.com.np" target="__blank" className="underline">
+                        <Link
+                            href="https://github.com/yogendrarana/yogendrarana.com.np"
+                            target="__blank"
+                            className="underline"
+                        >
                             GitHub
                         </Link>
                         .
