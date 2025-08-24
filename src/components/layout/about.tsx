@@ -8,7 +8,7 @@ function About() {
 
             <MaxWidthContainer className="border-l border-r px-0">
                 {/* Section Content */}
-                <div className="p-16">
+                <div className="p-6 sm:p-16">
                     <div className="space-y-6 text-sm leading-relaxed text-muted-foreground">
                         <p className="text-justify">
                             Hello, World! I’m Yogendra Rana — a full-stack web developer from Nepal

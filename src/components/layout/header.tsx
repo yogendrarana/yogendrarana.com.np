@@ -16,7 +16,7 @@ export default function Header() {
                             <Logo />
                         </div>
 
-                        <nav className="hidden sm:flex items-center gap-1">
+                        <nav className="flex items-center gap-1">
                             <Link href="/blog">
                                 <Button variant="outline" size="sm" className="rounded-none">
                                     Blog

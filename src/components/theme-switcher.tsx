@@ -7,7 +7,7 @@ import { MoonIcon, SunIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function ThemeSwitcher() {
-    const { theme, setTheme, systemTheme } = useTheme();
+    const { theme, setTheme } = useTheme();
 
     return (
         <Button
