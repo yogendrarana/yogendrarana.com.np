@@ -1,5 +1,5 @@
-import MaxWidthContainer from "../max-width-container";
-import SectionHeader from "./section-header";
+import SectionHeader from "@/components/layout/section-header";
+import MaxWidthContainer from "@/components/max-width-container";
 
 function About() {
     return (
@@ -11,15 +11,21 @@ function About() {
                 <div className="p-16">
                     <div className="space-y-6 text-sm leading-relaxed text-muted-foreground">
                         <p className="text-justify">
-                            Hello, World! This is Yogendra Rana – a Full Stack Web Developer from
-                            Nepal.  With 3+ years of experience, I specialize in building high-quality web
-                            and applications using React.js, Next.js, TypeScript, and modern
-                            technologies. Beyond work, I love exploring new technologies and turning
-                            ideas into reality through personal projects.
+                            Hello, World! I’m Yogendra Rana — a full-stack web developer from Nepal
+                            with a backend-focused mindset.
                         </p>
+
                         <p className="text-justify">
-                            I work with both MongoDB and PostgreSQL for databases. I also explore Go
-                            when I have time to expand my backend development skills.
+                            My stack includes React, Next.js, and TypeScript on the frontend, with
+                            Node.js, Express.js, PostgreSQL, and MongoDB on the backend. I also use
+                            Go whenever I get the chance.
+                        </p>
+
+                        <p className="text-justify">
+                            With nearly three years of coding experience, I continue to enjoy
+                            exploring new technologies and working on side projects to grow my
+                            skills. Beyond coding, I’m passionate about sports and music, which keep
+                            me inspired and balanced.
                         </p>
                     </div>
                 </div>

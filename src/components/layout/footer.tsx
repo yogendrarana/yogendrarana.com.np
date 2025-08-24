@@ -1,8 +1,9 @@
 import React from "react";
-import MaxWidthContainer from "../max-width-container";
 import Link from "next/link";
-import { MY_DATA } from "@/config/data";
+
 import { cn } from "@/lib/utils";
+import { MY_DATA } from "@/config/data";
+import MaxWidthContainer from "@/components/max-width-container";
 
 export default function Footer() {
     return (
@@ -21,14 +22,14 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    <div className="text-sm text-muted-foreground">
+                    <div className="mt-4 text-sm text-muted-foreground text-center">
                         Keep coding, keep learning, keep building! 💻✨
                     </div>
 
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-muted-foreground text-sm text-center">
                         Built by{" "}
                         <Link href={MY_DATA.socials.x} target="__blank" className="underline">
-                            yogendra
+                            yogendra rana
                         </Link>
                         . The source code is available on{" "}
                         <Link href="https://github.com/yogendrarana/yogendrarana.com.np" target="__blank" className="underline">

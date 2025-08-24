@@ -1,11 +1,13 @@
-import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { MY_DATA } from "@/config/data";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 
+import { cn } from "@/lib/utils";
+import { MY_DATA } from "@/config/data";
+
 import "@/styles/custom.css";
 import "@/styles/globals.css";
+import { Providers } from "@/components/providers";
 
 export const metadata: Metadata = {
     metadataBase: new URL(MY_DATA.websiteUrl),
@@ -28,7 +30,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                     inter.className
                 )}
             >
-                <main>{children}</main>
+                <Providers>
+                    <main>{children}</main>
+                </Providers>
             </body>
             <Analytics />
         </html>

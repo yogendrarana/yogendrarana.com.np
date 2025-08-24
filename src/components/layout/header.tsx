@@ -1,9 +1,10 @@
 import React from "react";
 import Link from "next/link";
 
-import Logo from "../logo";
+import Logo from "@/components/logo";
 import { Button } from "@/components/ui/button";
-import MaxWidthContainer from "../max-width-container";
+import ThemeSwitcher from "@/components/theme-switcher";
+import MaxWidthContainer from "@/components/max-width-container";
 
 export default function Header() {
     return (
@@ -15,12 +16,14 @@ export default function Header() {
                             <Logo />
                         </div>
 
-                        <nav className="hidden md:flex items-center gap-1">
+                        <nav className="hidden sm:flex items-center gap-1">
                             <Link href="/blog">
                                 <Button variant="outline" size="sm" className="rounded-none">
                                     Blog
                                 </Button>
                             </Link>
+
+                            <ThemeSwitcher />
                         </nav>
                     </div>
                 </div>
