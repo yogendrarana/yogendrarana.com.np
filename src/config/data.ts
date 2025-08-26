@@ -1,5 +1,6 @@
 import Bluesky from "@/components/icon/bluesky";
 import GitHub from "@/components/icon/github";
+import Gmail from "@/components/icon/gmail";
 import LinkedIn from "@/components/icon/linkedin";
 import Peerlist from "@/components/icon/peerlist";
 import X from "@/components/icon/x";

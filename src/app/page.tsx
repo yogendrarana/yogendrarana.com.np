@@ -6,6 +6,7 @@ import Socials from "@/components/layout/socials";
 import Projects from "@/components/layout/projects";
 import Experience from "@/components/layout/experience";
 import Education from "@/components/layout/education";
+import { MobileDock } from "@/components/mobile-dock";
 
 export default function Home() {
     return (
@@ -18,6 +19,7 @@ export default function Home() {
             <Education />
             <Socials />
             <Footer />
+            <MobileDock />
         </div>
     );
 }
