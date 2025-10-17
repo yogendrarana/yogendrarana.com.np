@@ -11,12 +11,12 @@ import MaxWidthContainer from "@/components/max-width-container";
 
 function Projects() {
     return (
-        <section id="projects" className="border-b">
+        <section id="projects" className="border-b border-dashed">
             <SectionHeader title="Projects" />
-            <MaxWidthContainer className="px-0 border-l border-r">
-                <div className="divide-y divide-border">
+            <MaxWidthContainer className="px-0 border-l border-r border-dashed">
+                <div className="divide-y divide-border divide-dashed">
                     {MY_DATA.projects.map((project, idx) => (
-                        <div key={idx} className="px-6 py-6 first:pt-6 last:pb-6">
+                        <div key={idx} className="p-6 space-y-4">
                             <div className="flex justify-between items-center flex-wrap gap-4">
                                 <Link
                                     href={project.liveLink}
@@ -48,10 +48,12 @@ function Projects() {
                                     )}
                                 </div>
                             </div>
-                            <p className="text-muted-foreground mt-1 text-sm leading-relaxed text-justify">
+
+                            <p className="text-muted-foreground text-sm leading-relaxed text-justify">
                                 {project.description}
                             </p>
-                            <div className="flex flex-wrap gap-2 mt-4">
+                            
+                            <div className="flex flex-wrap gap-2">
                                 {project.techStack.map((tech, techIdx) => (
                                     <Badge
                                         key={techIdx}

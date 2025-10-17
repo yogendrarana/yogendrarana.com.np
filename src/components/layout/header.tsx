@@ -9,8 +9,8 @@ import MaxWidthContainer from "@/components/max-width-container";
 
 export default function Header() {
     return (
-        <header className="bg-background sticky top-0 z-50 border-b">
-            <MaxWidthContainer className="sm:border-l sm:border-r">
+        <header className="bg-background sticky top-0 z-50 border-b border-dashed">
+            <MaxWidthContainer className="sm:border-l sm:border-r border-dashed">
                 <div className="py-4">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center">

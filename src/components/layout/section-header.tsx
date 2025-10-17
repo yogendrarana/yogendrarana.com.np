@@ -3,8 +3,8 @@ import MaxWidthContainer from "../max-width-container";
 
 export default function SectionHeader({ title }: { title: string }) {
     return (
-        <div className="border-b">
-            <MaxWidthContainer className="px-0 border-l border-r">
+        <div className="border-b border-dashed">
+            <MaxWidthContainer className="px-0 border-l border-r border-dashed">
                 <div
                     className="h-18 px-6 flex items-center"
                     style={{

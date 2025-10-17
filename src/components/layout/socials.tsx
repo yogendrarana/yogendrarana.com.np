@@ -11,8 +11,8 @@ function Socials() {
     return (
         <section>
             <SectionHeader title="Socials" />
-            <MaxWidthContainer className="border-l border-r px-0">
-                <div className="h-36 sm:h-18 grid grid-cols-2 md:grid-cols-5 border-b">
+            <MaxWidthContainer className="border-l border-r px-0 border-dashed">
+                <div className="h-36 sm:h-18 grid grid-cols-2 md:grid-cols-5 border-b border-dashed">
                     {socialArray.map((social, idx) => {
                         const Icon = social.component;
                         const isLast = idx === socialArray.length - 1;
@@ -23,7 +23,7 @@ function Socials() {
                                 href={social.link}
                                 target="_blank"
                                 className={`${
-                                    !isLast ? "border-b sm:border-b-0 border-r" : ""
+                                    !isLast ? "border-b sm:border-b-0 border-r border-dashed" : ""
                                 } hover:bg-muted transition-colors flex items-center justify-center gap-3`}
                             >
                                 <Icon className="h-5 w-5 text-muted-foreground" />

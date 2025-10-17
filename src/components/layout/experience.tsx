@@ -14,13 +14,13 @@ function Experience() {
     const [expandedExperience, setExpandedExperience] = React.useState<number | null>(null);
 
     return (
-        <section id="experience" className="border-b border-border">
+        <section id="experience" className="border-b border-border border-dashed">
             <SectionHeader title="Experience" />
 
-            <MaxWidthContainer className="px-0 border-l border-r border-border">
-                <div>
+            <MaxWidthContainer className="px-0 border-l border-r border-border border-dashed">
+                <div className="divide-y divide-border divide-dashed">
                     {MY_DATA.experience.map((experience, index) => (
-                        <div key={index} className="border-b border-border last:border-b-0">
+                        <div key={index}>
                             <div
                                 className="px-6 py-6 cursor-pointer hover:bg-accent/50 transition-colors"
                                 onClick={() =>
@@ -63,7 +63,7 @@ function Experience() {
                                         transition={{ duration: 0.3, ease: "easeInOut" }}
                                         className="overflow-hidden"
                                     >
-                                        <div className="px-6 pb-6 border-t border-border">
+                                        <div className="px-6 pb-6 border-t border-border border-dashed">
                                             <ul className="space-y-2 mb-4 mt-4">
                                                 {experience.highlights.map(
                                                     (detail, detailIndex) => (

@@ -3,10 +3,10 @@ import MaxWidthContainer from "@/components/max-width-container";
 
 function About() {
     return (
-        <section id="about" className="border-b">
+        <section id="about" className="border-b border-dashed">
             <SectionHeader title="About" />
 
-            <MaxWidthContainer className="border-l border-r px-0">
+            <MaxWidthContainer className="border-l border-r px-0 border-dashed">
                 {/* Section Content */}
                 <div className="p-6 sm:p-16">
                     <div className="space-y-6 text-sm leading-relaxed text-muted-foreground">

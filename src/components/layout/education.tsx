@@ -5,10 +5,10 @@ import MaxWidthContainer from "@/components/max-width-container";
 
 function Education() {
     return (
-        <section id="education" className="border-b">
+        <section id="education" className="border-b border-dashed">
             <SectionHeader title="Education" />
-            <MaxWidthContainer className="px-0 border-l border-r">
-                <div className="divide-y divide-border">
+            <MaxWidthContainer className="px-0 border-l border-r border-dashed">
+                <div className="divide-y divide-border divide-dashed">
                     {MY_DATA.education.map((edu, idx) => (
                         <div key={idx} className="px-6 py-6 first:pt-6 last:pb-6">
                             <div className="flex justify-between items-center flex-wrap gap-4">

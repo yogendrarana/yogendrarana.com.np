@@ -8,7 +8,7 @@ import MaxWidthContainer from "@/components/max-width-container";
 export default function Footer() {
     return (
         <footer>
-            <MaxWidthContainer className="border-l border-r">
+            <MaxWidthContainer className="border-l border-r border-dashed">
                 <div className={cn("py-8 flex flex-col gap-2 justify-center items-center")}>
                     <div className="">
                         <p

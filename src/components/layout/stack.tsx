@@ -4,10 +4,10 @@ import SectionHeader from "./section-header";
 
 function Stack() {
     return (
-        <section className="border-b">
+        <section className="border-b border-dashed">
             <SectionHeader title="About" />
 
-            <MaxWidthContainer className="border-l border-r px-0">
+            <MaxWidthContainer className="border-l border-r px-0 border-dashed">
                 {/* Grid */}
                 <div className="grid grid-cols-3 md:grid-cols-5">
                     {MY_DATA.skills.map((tech, index) => (

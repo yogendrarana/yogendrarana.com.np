@@ -7,8 +7,8 @@ import MaxWidthContainer from "@/components/max-width-container";
 
 function Hero() {
     return (
-        <section id="home" className="border-b">
-            <MaxWidthContainer className="sm:border-l sm:border-r">
+        <section id="home" className="border-b border-dashed">
+            <MaxWidthContainer className="sm:border-l sm:border-r border-dashed">
                 <div className="py-24">
                     <div className="text-center">
                         <Badge
