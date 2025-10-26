@@ -11,7 +11,7 @@ import SectionHeader from "@/components/layout/section-header";
 import MaxWidthContainer from "@/components/max-width-container";
 
 function Experience() {
-    const [expandedExperience, setExpandedExperience] = React.useState<number | null>(null);
+    const [expandedExperience, setExpandedExperience] = React.useState<number | null>(0);
 
     return (
         <section id="experience" className="border-b border-border border-dashed">
