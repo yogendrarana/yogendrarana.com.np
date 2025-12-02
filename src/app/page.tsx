@@ -9,17 +9,17 @@ import Education from "@/components/layout/education";
 import { MobileDock } from "@/components/mobile-dock";
 
 export default function Home() {
-    return (
-        <div className="min-h-screen">
-            <Header />
-            <Hero />
-            <About />
-            <Projects />
-            <Experience />
-            <Education />
-            <Socials />
-            <Footer />
-            <MobileDock />
-        </div>
-    );
+  return (
+    <div className="min-h-screen">
+      <Header />
+      <Hero />
+      <About />
+      <Projects />
+      <Experience />
+      <Education />
+      <Socials />
+      <Footer />
+      <MobileDock />
+    </div>
+  );
 }
