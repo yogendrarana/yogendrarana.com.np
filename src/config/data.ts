@@ -81,8 +81,8 @@ export const MY_DATA = {
       techStack: ["Next.js", "Tailwind CSS"],
       description:
         "A collection of beautiful, interactive UI components built with React.js, Tailwind CSS, and Framer Motion.",
-      liveLink: "https://craft-dot-ui.vercel.app/",
-      githubLink: "https://github.com/yogendrarana/craftui",
+      liveLink: "https://craftdotui.vercel.app/",
+      githubLink: "https://github.com/yogendrarana/craftdotui",
     },
     {
       title: "How to Chess?",
