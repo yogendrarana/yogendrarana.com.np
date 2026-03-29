@@ -15,7 +15,7 @@ export default function Footer() {
           <div className="">
             <p
               className={cn(
-                "text-start text-xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-300",
+                "text-start text-xl font-bold bg-clip-text text-transparent bg-linear-to-b from-neutral-50 to-neutral-300",
                 "md:text-2xl lg:text-3xl",
                 "dark:from-neutral-950 dark:to-neutral-800",
               )}
@@ -25,7 +25,7 @@ export default function Footer() {
           </div>
 
           <div className="mt-4 text-sm text-muted-foreground text-center">
-            Keep coding, keep learning, keep building! 💻✨
+            Keep coding, keep learning, keep building!
           </div>
 
           <p className="text-muted-foreground text-sm text-center">

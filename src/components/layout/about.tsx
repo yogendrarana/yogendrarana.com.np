@@ -11,7 +11,7 @@ function About() {
         <div className="p-6 sm:p-16">
           <div className="space-y-6 text-sm leading-relaxed text-muted-foreground">
             <p className="text-justify">
-              Hello, World! I’m Yogendra Rana — a full-stack web developer from
+              Hello, World! I’m Yogendra Rana - a full-stack web developer from
               Nepal with a backend-focused mindset.
             </p>
 
