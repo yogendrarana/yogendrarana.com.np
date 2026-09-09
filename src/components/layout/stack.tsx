@@ -1,6 +1,6 @@
 import { MY_DATA } from "@/config/data";
 import MaxWidthContainer from "../max-width-container";
-import SectionHeader from "./section-header";
+import { SectionHeader } from "./section-header";
 
 function Stack() {
     return (
