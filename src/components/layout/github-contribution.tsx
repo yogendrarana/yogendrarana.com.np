@@ -17,13 +17,13 @@ import {
     SelectTrigger,
     SelectValue,
     SelectPopup,
-    SelectItem,
+    SelectItem
 } from "@/components/ui/select";
 import {
     buildContributionMonths,
     formatContributionDate,
     type MonthData,
-    type ContributionResponse,
+    type ContributionResponse
 } from "@/lib/github";
 
 interface GithubContributionProps {
@@ -107,7 +107,7 @@ export function GithubContribution({ initialData }: GithubContributionProps) {
         initialData ?? {
             year: currentYear,
             total: 0,
-            contributions: [],
+            contributions: []
         }
     );
     const [isPending, startTransition] = useTransition();
@@ -149,7 +149,7 @@ export function GithubContribution({ initialData }: GithubContributionProps) {
 
         return {
             activeDays,
-            maxContributions,
+            maxContributions
         };
     }, [data.contributions]);
 
@@ -160,7 +160,7 @@ export function GithubContribution({ initialData }: GithubContributionProps) {
             <MaxWidthContainer className="border-l border-r border-dashed">
                 <div>
                     {/* Header Bar: sublabel with contribution count + compact Select */}
-                    <div className="w-full px-6 py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div className="w-full px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                         <div className="flex items-center gap-2">
                             <p className="text-xs sm:text-sm text-muted-foreground font-medium">
                                 {data.total.toLocaleString()} contributions from Jan 1 to Dec 31,{" "}
@@ -228,7 +228,7 @@ export function GithubContribution({ initialData }: GithubContributionProps) {
                         </TooltipProvider>
                     </div>
 
-                    <div className="w-full px-6 py-3">
+                    <div className="w-full px-6 py-4">
                         {/* Bottom Meta Bar: Stats and Legend */}
                         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
                             {/* Other info */}

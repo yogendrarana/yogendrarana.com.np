@@ -12,7 +12,7 @@ export function Hero() {
                     <div className="text-center">
                         <Badge
                             variant="outline"
-                            className="mb-6 rounded-full px-3 py-1 text-muted-foreground"
+                            className="mb-6 rounded-full px-3 py-2 text-muted-foreground"
                         >
                             <MapPin className="h-3 w-3 mr-1" />
                             Pokhara, Nepal
