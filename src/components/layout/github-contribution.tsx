@@ -80,7 +80,7 @@ function MonthBlock({ month }: { month: MonthData }) {
                                     <TooltipTrigger
                                         aria-label={tooltipText}
                                         className={cn(
-                                            "size-2 sm:size-2.5 rounded-sm border transition-transform hover:scale-125 hover:z-10 cursor-pointer p-0",
+                                            "size-2 sm:size-2.5 rounded-xs border transition-transform hover:scale-125 hover:z-10 cursor-pointer p-0",
                                             getLevelClass(day.level)
                                         )}
                                     />

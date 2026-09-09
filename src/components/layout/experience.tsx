@@ -45,7 +45,6 @@ export function Experience() {
                                     </div>
 
                                     <Button
-                                        render={<div />}
                                         size="icon"
                                         variant="ghost"
                                         className="ml-4 rounded-none"
