@@ -13,34 +13,34 @@ export const MY_DATA = {
     avatarUrl: " https://github.com/yogendrarana.png",
     websiteUrl: "https://www.yogendrarana.com.np/",
     contact: {
-        emails: ["yogendrarana4321@gmail.com", "yogendrarana.mail@gmail.com"],
+        emails: ["yogendrarana4321@gmail.com", "yogendrarana.mail@gmail.com"]
     },
     socials: {
         github: {
             name: "GitHub",
             link: "https://github.com/yogendrarana",
-            component: GitHub,
+            component: GitHub
         },
         linkedin: {
-            name: "{LinkedIn}",
+            name: "LinkedIn",
             link: "https://www.linkedin.com/in/yogendra-rana",
-            component: LinkedIn,
+            component: LinkedIn
         },
         x: {
             name: "Twitter",
             link: "https://x.com/yooogendra_rana",
-            component: X,
+            component: X
         },
         bluesky: {
             name: "Bluesky",
             link: "https://bsky.app/profile/yogendrarana.bsky.social",
-            component: Bluesky,
+            component: Bluesky
         },
         peerlist: {
             name: "Peerlist",
             link: "https://peerlist.io/yogendrarana",
-            component: Peerlist,
-        },
+            component: Peerlist
+        }
     },
     skills: [
         "JavaScript",
@@ -51,20 +51,20 @@ export const MY_DATA = {
         "Node",
         "Express",
         "MongoDB",
-        "PostgreSQL",
+        "PostgreSQL"
     ],
     education: [
         {
             school: "Prithvi Narayan Campus, Pokhara, Gandaki, Nepal",
             degree: "Bachelor's Degree in Computer Science and Information Technology",
             period: "2018 - 2023",
-            end: "2023",
+            end: "2023"
         },
         {
             school: "SOS Hermann Gmeiner Gandaki, Nepal",
             degree: "10+2 Science (Higher Secondary Education Board)",
-            period: "2016 - 2018",
-        },
+            period: "2016 - 2018"
+        }
     ],
     projects: [
         {
@@ -73,7 +73,7 @@ export const MY_DATA = {
             description:
                 "Node Blueprint helps you scaffold Node.js applications with your preferred framework, database, and ORM in just one command.",
             liveLink: "https://node-blueprint.vercel.app/",
-            githubLink: "https://github.com/yogendrarana/node-blueprint",
+            githubLink: "https://github.com/yogendrarana/node-blueprint"
         },
         {
             title: "Craft UI",
@@ -81,7 +81,7 @@ export const MY_DATA = {
             description:
                 "A collection of beautiful, interactive UI components built with React.js, Tailwind CSS, and Framer Motion.",
             liveLink: "https://craftdotui.vercel.app/",
-            githubLink: "https://github.com/yogendrarana/craftdotui",
+            githubLink: "https://github.com/yogendrarana/craftdotui"
         },
         {
             title: "How to Chess?",
@@ -89,15 +89,15 @@ export const MY_DATA = {
             description:
                 "A simple chess-exploration app that helps users learn and practice chess at their own pace. It includes an interactive chessboard for self-play and a collection of popular chess openings.",
             liveLink: "https://howtochess.vercel.app/",
-            githubLink: "https://github.com/yogendrarana/howtochess",
+            githubLink: "https://github.com/yogendrarana/howtochess"
         },
         {
             title: "Make Your Meme",
             techStack: ["Next.js", "Tailwind CSS", "Radix UI"],
             description: "Create memes in seconds",
             liveLink: "https://makeyourmeme.vercel.app/",
-            githubLink: "https://github.com/yogendrarana/makeyourmeme",
-        },
+            githubLink: "https://github.com/yogendrarana/makeyourmeme"
+        }
     ],
     experience: [
         {
@@ -115,14 +115,14 @@ export const MY_DATA = {
                 "Express.js",
                 "Postgres",
                 "Objection.js",
-                "Knex.js",
+                "Knex.js"
             ],
             highlights: [
                 "Developed and maintained okhati.app, an in-house clinic management platform built with React, Node.js, Express, and PostgreSQL.",
                 "Integrated online payment solutions with both static and dynamic QR codes, supporting major Nepali providers such as eSewa, Khalti, and Connect IPS.",
                 "Designed and implemented a mini payroll system featuring attendance tracking, CTC setup, payroll processing, and automated tax calculations aligned with the latest Nepali tax regulations.",
-                "Built SSF claims processing and multi-credit note functionality, enabling accurate reimbursements and flexible billing adjustments.",
-            ],
+                "Built SSF claims processing and multi-credit note functionality, enabling accurate reimbursements and flexible billing adjustments."
+            ]
         },
         {
             company: "Rangin Technology",
@@ -136,8 +136,8 @@ export const MY_DATA = {
             highlights: [
                 "Started as an intern and transitioned into a junior developer role after demonstrating strong performance.",
                 "Built full-stack web applications for local SMEs, helping them establish and enhance their online presence.",
-                "Worked primarily with React and NestJS to deliver tailored solutions for client needs.",
-            ],
-        },
-    ],
+                "Worked primarily with React and NestJS to deliver tailored solutions for client needs."
+            ]
+        }
+    ]
 };
