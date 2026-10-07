@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { MY_DATA } from "@/config/data";
 import { SectionHeader } from "@/components/layout/section-header";
-import { MaxWidthContainer } from "@/components/max-width-container";
+import { Container } from "@/components/container";
 
 export function Socials() {
     const socialArray = Object.values(MY_DATA.socials); // convert object to array
@@ -10,7 +10,7 @@ export function Socials() {
     return (
         <section>
             <SectionHeader title="Socials" />
-            <MaxWidthContainer className="border-l border-r px-0 border-dashed">
+            <Container className="border-l border-r px-0 border-dashed">
                 <div className="h-36 sm:h-18 grid grid-cols-2 md:grid-cols-5 border-b border-dashed">
                     {socialArray.map((social, idx) => {
                         const Icon = social.component;
@@ -31,7 +31,7 @@ export function Socials() {
                         );
                     })}
                 </div>
-            </MaxWidthContainer>
+            </Container>
         </section>
     );
 }

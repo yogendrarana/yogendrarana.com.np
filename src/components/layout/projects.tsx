@@ -6,13 +6,13 @@ import { MY_DATA } from "@/config/data";
 import { GitHub } from "@/components/icon/github";
 import { Badge } from "@/components/ui/badge";
 import { SectionHeader } from "@/components/layout/section-header";
-import { MaxWidthContainer } from "@/components/max-width-container";
+import { Container } from "@/components/container";
 
 export function Projects() {
     return (
         <section id="projects" className="border-b border-dashed">
             <SectionHeader title="Projects" />
-            <MaxWidthContainer className="px-0 border-l border-r border-dashed">
+            <Container className="px-0 border-l border-r border-dashed">
                 <div className="divide-y divide-border divide-dashed">
                     {MY_DATA.projects.map((project) => (
                         <div key={project.title} className="p-6 space-y-4">
@@ -66,7 +66,7 @@ export function Projects() {
                         </div>
                     ))}
                 </div>
-            </MaxWidthContainer>
+            </Container>
         </section>
     );
 }

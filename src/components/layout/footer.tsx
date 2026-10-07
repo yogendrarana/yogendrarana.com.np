@@ -2,12 +2,12 @@ import Link from "next/link";
 
 import { cn } from "@/lib/utils";
 import { MY_DATA } from "@/config/data";
-import { MaxWidthContainer } from "@/components/max-width-container";
+import { Container } from "@/components/container";
 
 export function Footer() {
     return (
         <footer>
-            <MaxWidthContainer className="border-l border-r border-dashed">
+            <Container className="border-l border-r border-dashed">
                 <div className={cn("py-8 flex flex-col gap-2 justify-center items-center")}>
                     <div className="">
                         <p
@@ -41,7 +41,7 @@ export function Footer() {
                         .
                     </p>
                 </div>
-            </MaxWidthContainer>
+            </Container>
         </footer>
     );
 }

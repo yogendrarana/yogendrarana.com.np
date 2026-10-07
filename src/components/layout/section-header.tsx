@@ -1,9 +1,9 @@
-import { MaxWidthContainer } from "../max-width-container";
+import { Container } from "@/components/container";
 
 export function SectionHeader({ title }: { title: string }) {
     return (
         <div className="border-b border-dashed">
-            <MaxWidthContainer className="border-l border-r border-dashed">
+            <Container className="border-l border-r border-dashed">
                 <div
                     className="h-18 px-6 flex items-center"
                     style={{
@@ -13,7 +13,7 @@ export function SectionHeader({ title }: { title: string }) {
                 >
                     <h2 className="text-lg font-bold text-foreground">{title}</h2>
                 </div>
-            </MaxWidthContainer>
+            </Container>
         </div>
     );
 }

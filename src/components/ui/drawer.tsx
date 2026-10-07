@@ -1,17 +1,19 @@
 "use client";
 
-import { Checkbox as CheckboxPrimitive } from "@base-ui/react/checkbox";
-import { Drawer as DrawerPrimitive } from "@base-ui/react/drawer";
-import { mergeProps } from "@base-ui/react/merge-props";
-import { Radio as RadioPrimitive } from "@base-ui/react/radio";
-import { RadioGroup as RadioGroupPrimitive } from "@base-ui/react/radio-group";
-import { useRender } from "@base-ui/react/use-render";
-import { ChevronRightIcon, XIcon } from "lucide-react";
 import type React from "react";
 import { createContext, useContext } from "react";
-import { cn } from "@/lib/utils";
+import { ChevronRightIcon, XIcon } from "lucide-react";
+import { useRender } from "@base-ui/react/use-render";
+import { mergeProps } from "@base-ui/react/merge-props";
+import { Radio as RadioPrimitive } from "@base-ui/react/radio";
+import { Drawer as DrawerPrimitive } from "@base-ui/react/drawer";
+import { Checkbox as CheckboxPrimitive } from "@base-ui/react/checkbox";
+import { RadioGroup as RadioGroupPrimitive } from "@base-ui/react/radio-group";
+
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
+
+import { cn } from "cn";
 
 type DrawerPosition = "right" | "left" | "top" | "bottom";
 
@@ -541,6 +543,7 @@ export function DrawerMenuCheckboxItem({
                             width="24"
                             xmlns="http://www.w3.org/2000/svg"
                         >
+                            <title>Indicator</title>
                             <path d="M5.252 12.7 10.2 18.63 18.748 5.37" />
                         </svg>
                     </CheckboxPrimitive.Indicator>
@@ -600,6 +603,7 @@ export function DrawerMenuRadioItem({
                     width="24"
                     xmlns="http://www.w3.org/2000/svg"
                 >
+                    <title>Indicator</title>
                     <path d="M5.252 12.7 10.2 18.63 18.748 5.37" />
                 </svg>
             </RadioPrimitive.Indicator>

@@ -1,36 +1,27 @@
 /** biome-ignore-all lint/suspicious/noArrayIndexKey: <let use index as key> */
 "use client";
 
-import { useMemo, useState, useTransition } from "react";
+import { useMemo } from "react";
 import Link from "next/link";
-import { ArrowUpRight, Loader2 } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { MY_DATA } from "@/config/data";
 import { GitHub } from "@/components/icon/github";
 import { SectionHeader } from "@/components/layout/section-header";
-import { MaxWidthContainer } from "@/components/max-width-container";
+import { Container } from "@/components/container";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import {
-    Select,
-    SelectTrigger,
-    SelectValue,
-    SelectPopup,
-    SelectItem
-} from "@/components/ui/select";
 import {
     buildContributionMonths,
     formatContributionDate,
     type MonthData,
-    type ContributionResponse
+    type ContributionResponse,
 } from "@/lib/github";
 
 interface GithubContributionProps {
     initialData?: ContributionResponse;
 }
-
-const AVAILABLE_YEARS = [2026, 2025, 2024, 2023, 2022, 2021, 2020];
 
 function getLevelClass(level: number) {
     switch (level) {
@@ -102,36 +93,15 @@ function MonthBlock({ month }: { month: MonthData }) {
 
 export function GithubContribution({ initialData }: GithubContributionProps) {
     const currentYear = new Date().getFullYear();
-    const [selectedYear, setSelectedYear] = useState<number>(initialData?.year ?? currentYear);
-    const [data, setData] = useState<ContributionResponse>(
-        initialData ?? {
-            year: currentYear,
-            total: 0,
-            contributions: []
-        }
-    );
-    const [isPending, startTransition] = useTransition();
-
-    const handleYearChange = (year: number) => {
-        if (year === selectedYear) return;
-        setSelectedYear(year);
-
-        startTransition(async () => {
-            try {
-                const res = await fetch(`/api/contributions?year=${year}`);
-                if (res.ok) {
-                    const json = await res.json();
-                    setData(json);
-                }
-            } catch (err) {
-                console.error("Failed to load year data", err);
-            }
-        });
+    const data = initialData ?? {
+        year: currentYear,
+        total: 0,
+        contributions: [],
     };
 
     const months = useMemo(() => {
-        return buildContributionMonths(data.contributions, selectedYear);
-    }, [data.contributions, selectedYear]);
+        return buildContributionMonths(data.contributions, currentYear);
+    }, [data.contributions, currentYear]);
 
     // Derived statistics
     const stats = useMemo(() => {
@@ -149,7 +119,7 @@ export function GithubContribution({ initialData }: GithubContributionProps) {
 
         return {
             activeDays,
-            maxContributions
+            maxContributions,
         };
     }, [data.contributions]);
 
@@ -157,56 +127,23 @@ export function GithubContribution({ initialData }: GithubContributionProps) {
         <section id="activity" className="border-b border-dashed">
             <SectionHeader title="Activity" />
 
-            <MaxWidthContainer className="border-l border-r border-dashed">
+            <Container className="border-l border-r border-dashed">
                 <div>
-                    {/* Header Bar: sublabel with contribution count + compact Select */}
+                    {/* Header Bar: sublabel with contribution count + GitHub link */}
                     <div className="w-full px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                         <div className="flex items-center gap-2">
                             <p className="text-xs sm:text-sm text-muted-foreground font-medium">
-                                {data.total.toLocaleString()} contributions from Jan 1 to Dec 31,{" "}
-                                {selectedYear}
+                                {data.total.toLocaleString()} contributions in {currentYear}
                             </p>
-                            {isPending && (
-                                <Loader2 className="h-3.5 w-3.5 animate-spin text-muted-foreground" />
-                            )}
                         </div>
 
-                        <div className="flex items-center gap-2 flex-wrap">
-                            <Select
-                                value={selectedYear.toString()}
-                                onValueChange={(val) => {
-                                    if (val) handleYearChange(parseInt(val as string, 10));
-                                }}
-                            >
-                                <SelectTrigger
-                                    size="sm"
-                                    className="w-auto min-w-0 px-2.5 py-1 text-xs font-medium rounded-none border border-dashed bg-muted/40 hover:bg-muted/70 gap-1.5 shadow-none before:hidden cursor-pointer"
-                                >
-                                    <SelectValue className="text-muted-foreground" />
-                                </SelectTrigger>
-                                <SelectPopup
-                                    align="end"
-                                    sideOffset={4}
-                                    className="min-w-20 p-1 rounded-none border border-dashed bg-popover text-muted-foreground"
-                                >
-                                    {AVAILABLE_YEARS.map((year) => (
-                                        <SelectItem
-                                            key={year}
-                                            value={year.toString()}
-                                            className="text-xs py-1 px-2 rounded-none cursor-pointer"
-                                        >
-                                            {year}
-                                        </SelectItem>
-                                    ))}
-                                </SelectPopup>
-                            </Select>
-
+                        <div className="flex items-center gap-2">
                             {/* GitHub Link */}
                             <Link
                                 href={MY_DATA.socials.github.link}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="hidden sm:inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground border border-dashed px-2.5 py-1.5 transition-colors"
+                                className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground border border-dashed px-2.5 py-1.5 transition-colors"
                             >
                                 <GitHub className="h-3.5 w-3.5" />
                                 <span>@yogendrarana</span>
@@ -261,7 +198,7 @@ export function GithubContribution({ initialData }: GithubContributionProps) {
                         </div>
                     </div>
                 </div>
-            </MaxWidthContainer>
+            </Container>
         </section>
     );
 }

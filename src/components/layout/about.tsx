@@ -1,12 +1,12 @@
 import { SectionHeader } from "@/components/layout/section-header";
-import { MaxWidthContainer } from "@/components/max-width-container";
+import { Container } from "@/components/container";
 
 export function About() {
     return (
         <section id="about" className="border-b border-dashed">
             <SectionHeader title="About" />
 
-            <MaxWidthContainer className="border-l border-r border-dashed">
+            <Container className="border-l border-r border-dashed">
                 {/* Section Content */}
                 <div className="p-6">
                     <div className="space-y-6 text-sm leading-relaxed text-muted-foreground">
@@ -29,7 +29,7 @@ export function About() {
                         </p>
                     </div>
                 </div>
-            </MaxWidthContainer>
+            </Container>
         </section>
     );
 }

@@ -11,7 +11,7 @@ import { MY_DATA } from "@/config/data";
 import { LinkedIn } from "./icon/linkedin";
 import { Separator } from "@/components/ui/separator";
 import { buttonVariants } from "@/components/ui/button";
-import { Dock, DockIcon } from "@/components/magicui/dock";
+import { Dock, DockIcon } from "@/components/dock";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;

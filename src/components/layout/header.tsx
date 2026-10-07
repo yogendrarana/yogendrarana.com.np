@@ -6,12 +6,12 @@ import { cn } from "@/lib/utils";
 import { Logo } from "@/components/logo";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import { buttonVariants } from "@/components/ui/button";
-import { MaxWidthContainer } from "@/components/max-width-container";
+import { Container } from "@/components/container";
 
 export function Header() {
     return (
         <header className="bg-background sticky top-0 z-50 border-b border-dashed">
-            <MaxWidthContainer className="px-4 sm:border-l sm:border-r border-dashed">
+            <Container className="px-4 sm:border-l sm:border-r border-dashed">
                 <div className="py-4">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center">
@@ -33,7 +33,7 @@ export function Header() {
                         </div>
                     </div>
                 </div>
-            </MaxWidthContainer>
+            </Container>
         </header>
     );
 }

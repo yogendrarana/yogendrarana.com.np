@@ -8,7 +8,7 @@ import { MY_DATA } from "@/config/data";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { SectionHeader } from "@/components/layout/section-header";
-import { MaxWidthContainer } from "@/components/max-width-container";
+import { Container } from "@/components/container";
 
 export function Experience() {
     const [expandedExperience, setExpandedExperience] = React.useState<number | null>(0);
@@ -17,7 +17,7 @@ export function Experience() {
         <section id="experience" className="border-b border-border border-dashed">
             <SectionHeader title="Experience" />
 
-            <MaxWidthContainer className="px-0 border-l border-r border-border border-dashed">
+            <Container className="px-0 border-l border-r border-border border-dashed">
                 <div className="divide-y divide-border divide-dashed">
                     {MY_DATA.experience.map((experience, index) => (
                         <div key={experience.company}>
@@ -101,7 +101,7 @@ export function Experience() {
                         </div>
                     ))}
                 </div>
-            </MaxWidthContainer>
+            </Container>
         </section>
     );
 }
