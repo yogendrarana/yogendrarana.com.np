@@ -10,10 +10,10 @@ export const MY_DATA = {
     location: "Pokhara, Nepal",
     locationLink: "https://www.google.com/maps/place/pokhara",
     role: "Full Stack Developer",
-    avatarUrl: " https://github.com/yogendrarana.png",
+    avatarUrl: "https://github.com/yogendrarana.png",
     websiteUrl: "https://www.yogendrarana.com.np/",
     contact: {
-        emails: ["yogendrarana4321@gmail.com", "yogendrarana.mail@gmail.com"],
+        emails: ["yogendrarana.mail@gmail.com", "yogendrarana4321@gmail.com"],
     },
     socials: {
         github: {

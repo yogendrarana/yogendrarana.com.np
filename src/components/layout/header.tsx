@@ -10,20 +10,20 @@ import { Container } from "@/components/container";
 
 export function Header() {
     return (
-        <header className="bg-background sticky top-0 z-50 border-b border-dashed">
-            <Container className="px-4 sm:border-l sm:border-r border-dashed">
-                <div className="py-4">
+        <header className="bg-background/85 backdrop-blur-md sticky top-0 z-50 border-b border-dashed">
+            <Container className="px-6 sm:border-l sm:border-r border-dashed relative">
+                <div className="py-3.5">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center">
                             <Logo />
                         </div>
 
-                        <div className="flex items-center gap-1">
+                        <div className="flex items-center gap-1 sm:gap-2">
                             <Link
                                 href="/blog"
                                 className={cn(
                                     buttonVariants({ variant: "outline", size: "sm" }),
-                                    "hidden sm:flex "
+                                    "hidden sm:flex rounded-none border-dashed font-mono text-xs h-8"
                                 )}
                             >
                                 Blog

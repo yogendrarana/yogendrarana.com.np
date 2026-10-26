@@ -10,6 +10,7 @@ import { MY_DATA } from "@/config/data";
 import { GitHub } from "@/components/icon/github";
 import { SectionHeader } from "@/components/layout/section-header";
 import { Container } from "@/components/container";
+import { CornerCrosshairs } from "@/components/grid-system";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import {
@@ -127,13 +128,17 @@ export function GithubContribution({ initialData }: GithubContributionProps) {
         <section id="activity" className="border-b border-dashed">
             <SectionHeader title="Activity" />
 
-            <Container className="border-l border-r border-dashed">
+            <Container className="sm:border-l sm:border-r border-dashed relative">
+                <CornerCrosshairs top={false} bottom />
                 <div>
                     {/* Header Bar: sublabel with contribution count + GitHub link */}
                     <div className="w-full px-6 py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                         <div className="flex items-center gap-2">
-                            <p className="text-xs sm:text-sm text-muted-foreground font-medium">
-                                {data.total.toLocaleString()} contributions in {currentYear}
+                            <p className="text-xs sm:text-sm text-muted-foreground font-mono">
+                                <strong className="text-foreground font-semibold">
+                                    {data.total.toLocaleString()}
+                                </strong>{" "}
+                                contributions in {currentYear}
                             </p>
                         </div>
 
@@ -143,7 +148,7 @@ export function GithubContribution({ initialData }: GithubContributionProps) {
                                 href={MY_DATA.socials.github.link}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground border border-dashed px-2.5 py-1.5 transition-colors"
+                                className="inline-flex items-center gap-1.5 text-xs font-mono text-muted-foreground hover:text-foreground border border-dashed px-2.5 py-1.5 transition-colors hover:bg-muted/40"
                             >
                                 <GitHub className="h-3.5 w-3.5" />
                                 <span>@yogendrarana</span>
@@ -153,7 +158,7 @@ export function GithubContribution({ initialData }: GithubContributionProps) {
                     </div>
 
                     {/* Calendar Grid Container */}
-                    <div className="w-full p-6 border-y border-dashed border-border/80">
+                    <div className="w-full p-6 border-y border-dashed border-border/80 bg-muted/15">
                         <TooltipProvider delay={50}>
                             <ScrollArea className="w-full">
                                 <div className="flex select-none justify-between gap-1 sm:gap-2">
@@ -165,9 +170,9 @@ export function GithubContribution({ initialData }: GithubContributionProps) {
                         </TooltipProvider>
                     </div>
 
-                    <div className="w-full px-6 py-4">
+                    <div className="w-full px-6 py-3.5">
                         {/* Bottom Meta Bar: Stats and Legend */}
-                        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
+                        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono text-muted-foreground">
                             {/* Other info */}
                             <div className="flex items-center gap-3 text-muted-foreground flex-wrap">
                                 <span>
@@ -176,9 +181,9 @@ export function GithubContribution({ initialData }: GithubContributionProps) {
                                         {stats.activeDays}
                                     </strong>
                                 </span>
-                                <span>•</span>
+                                <span className="text-border">|</span>
                                 <span>
-                                    Max in a day:{" "}
+                                    Peak day:{" "}
                                     <strong className="text-foreground font-semibold">
                                         {stats.maxContributions}
                                     </strong>
