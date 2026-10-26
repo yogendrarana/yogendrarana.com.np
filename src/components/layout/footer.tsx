@@ -9,8 +9,8 @@ export function Footer() {
 
     return (
         <footer>
-            <Container className="sm:border-l sm:border-r border-dashed overflow-hidden">
-                <div className="px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-dashed text-xs font-mono text-muted-foreground">
+            <Container className="border-l border-r border-dashed overflow-hidden">
+                <div className="px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-dashed text-xs text-muted-foreground">
                     <p>Keep coding, keep learning, keep building.</p>
 
                     <p className="text-center sm:text-right">
@@ -35,7 +35,7 @@ export function Footer() {
                     </p>
                 </div>
 
-                <div className="py-6 px-4 flex justify-center items-center select-none bg-dot-grid">
+                <div className="py-6 px-4 flex justify-center items-center select-none">
                     <p
                         className={cn(
                             "text-center text-3xl sm:text-5xl md:text-6xl font-bold tracking-tighter uppercase",

@@ -12,7 +12,7 @@ export function Socials() {
     return (
         <section id="socials" className="border-b border-dashed">
             <SectionHeader title="Socials" />
-            <Container className="sm:border-l sm:border-r px-0 border-dashed relative">
+            <Container className="border-l border-r px-0 border-dashed">
                 <div className="grid grid-cols-2 sm:grid-cols-5">
                     {socialArray.map((social, idx) => {
                         const Icon = social.component;

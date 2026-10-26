@@ -1,20 +1,20 @@
 import { Container } from "@/components/container";
 import { CornerCrosshairs } from "@/components/grid-system";
 
-interface SectionHeaderProps {
-    title: string;
-}
-
-export function SectionHeader({ title }: SectionHeaderProps) {
+export function SectionHeader({ title }: { title: string }) {
     return (
         <div className="border-b border-dashed">
-            <Container className="sm:border-l sm:border-r border-dashed relative">
-                <CornerCrosshairs top={false} bottom />
-                <div className="h-14 sm:h-16 px-6 flex items-center bg-hatch">
-                    <div className="flex items-center bg-background/90 backdrop-blur-xs border border-dashed border-border px-3 py-1">
-                        <h2 className="text-sm sm:text-base font-semibold tracking-tight text-foreground">
-                            {title}
-                        </h2>
+            <Container className="border-l border-r border-dashed relative">
+                <CornerCrosshairs />
+                <div
+                    className="h-16 px-4 flex items-center"
+                    style={{
+                        background:
+                            "repeating-linear-gradient(-45deg, var(--color-border), var(--color-border) 1px, transparent 1px, transparent 6px)"
+                    }}
+                >
+                    <div className="bg-background px-2.5 py-1 border border-border">
+                        <h2 className="text-md font-semibold text-foreground">{title}</h2>
                     </div>
                 </div>
             </Container>

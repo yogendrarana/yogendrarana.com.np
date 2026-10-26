@@ -7,12 +7,12 @@ const positionClasses: Record<CrosshairPosition, string> = {
     "top-left": "-top-[3.5px] -left-[3.5px]",
     "top-right": "-top-[3.5px] -right-[3.5px]",
     "bottom-left": "-bottom-[3.5px] -left-[3.5px]",
-    "bottom-right": "-bottom-[3.5px] -right-[3.5px]",
+    "bottom-right": "-bottom-[3.5px] -right-[3.5px]"
 };
 
 export function Crosshair({
     position = "top-left",
-    className,
+    className
 }: {
     position?: CrosshairPosition;
     className?: string;
@@ -24,7 +24,7 @@ export function Crosshair({
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
             className={cn(
-                "pointer-events-none absolute z-20 w-[7px] h-[7px] text-foreground/45 select-none",
+                "pointer-events-none absolute z-20 w-[7px] h-[7px] text-foreground/30 select-none",
                 positionClasses[position],
                 className
             )}
@@ -37,7 +37,7 @@ export function Crosshair({
 export function CornerCrosshairs({
     top = true,
     bottom = true,
-    className,
+    className
 }: {
     top?: boolean;
     bottom?: boolean;
@@ -64,7 +64,7 @@ export function CornerCrosshairs({
 export function HatchSeparator({
     height = "md",
     className,
-    showCrosshairs = true,
+    showCrosshairs = true
 }: {
     height?: "sm" | "md";
     className?: string;
@@ -90,7 +90,7 @@ export function HatchSeparator({
 export function InlineHatchBar({
     height = "sm",
     className,
-    showCrosshairs = false,
+    showCrosshairs = false
 }: {
     height?: "sm" | "md";
     className?: string;
@@ -116,7 +116,7 @@ export function RailSection({
     className,
     railClassName,
     topCrosshairs = true,
-    bottomCrosshairs = true,
+    bottomCrosshairs = true
 }: {
     as?: React.ElementType;
     children: React.ReactNode;
@@ -139,7 +139,7 @@ export function SectionHeader({
     title,
     badge,
     description,
-    className,
+    className
 }: {
     title: string;
     badge?: string;
