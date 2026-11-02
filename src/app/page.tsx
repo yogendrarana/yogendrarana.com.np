@@ -1,5 +1,4 @@
 import { Hero } from "@/components/layout/hero";
-import { About } from "@/components/layout/about";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { Socials } from "@/components/layout/socials";
@@ -19,7 +18,6 @@ export default async function Home() {
             <Header />
             <Hero />
             <GithubContribution initialData={initialData} />
-            <About />
             <Projects />
             <Experience />
             <Education />
